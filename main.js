@@ -5,9 +5,7 @@ const dbg = (x) => {
 
 const isReassign = (variable, code) =>
   new RegExp(
-    `^\\s*${variable}\\s+=\\s*` +
-      `|^\\s*${variable}\\s*[+\\-*%/]\\s*=\\s*` +
-      `|^\\s*${variable}\\s*[+\\-]+\\s*`,
+    `^\\s*${variable}\\s+=\\s*|\\s*[^_a-zA-Z]${variable}\\s*[+\\-*%/]\\s*=\\s*|\\s*[^_a-zA-Z]${variable}\\s*[+\\-]+\\s*`,
     "gm",
   ).test(code);
 
