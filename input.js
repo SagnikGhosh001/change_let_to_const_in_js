@@ -1,4 +1,9 @@
 let x = 0;
-
 let y = 0;
 y = 12;
+let z = 0;
+const hi = 0;
+let hello = 8;
+hello = 6;
+let you = 8;
+const hi = 0;
