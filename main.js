@@ -4,7 +4,12 @@ const dbg = (x) => {
 };
 
 const isReassign = (variable, code) =>
-  new RegExp(`(?<!\\s*let\\s+)${variable}\\s+=`, "g").test(code);
+  new RegExp(
+    `^\\s*${variable}\\s+=\\s*` +
+      `|^\\s*${variable}\\s*[+\\-*%/]\\s*=\\s*` +
+      `|^\\s*${variable}\\s*[+\\-]+\\s*`,
+    "gm",
+  ).test(code);
 
 const filterOutReassignedVariables = (variables, code) =>
   variables.filter((variable) => !isReassign(variable, code));

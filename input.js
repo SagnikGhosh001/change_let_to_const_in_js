@@ -1,9 +1,16 @@
 let x = 0;
+x += 10;
 let y = 0;
 y = 12;
 let z = 0;
-const hi = 0;
+let hi = 0;
 let hello = 8;
 hello = 6;
 let you = 8;
 let hii = 0;
+let xx = 0;
+const xz = 0;
+let zx = 0;
+let hellohi = 0;
+hellohi++;
+let hihello = 0;
