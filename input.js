@@ -1,1 +1,4 @@
-const test = 0;
+let x = 0;
+
+let y = 0;
+y = 12;
