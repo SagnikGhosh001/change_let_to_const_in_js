@@ -3,10 +3,8 @@ const dbg = (x) => {
   return x;
 };
 
-const isReassign = (variable, code) => {
-  const regExp = new RegExp(`(?<!\\s*let\\s+)${variable}\\s+=`, "g");
-  return regExp.test(code);
-};
+const isReassign = (variable, code) =>
+  new RegExp(`(?<!\\s*let\\s+)${variable}\\s+=`, "g").test(code);
 
 const filterOutReassignedVariables = (variables, code) =>
   variables.filter((variable) => !isReassign(variable, code));
